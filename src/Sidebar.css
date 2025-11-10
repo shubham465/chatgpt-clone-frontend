@@ -1,0 +1,58 @@
+.Container{
+ background-color: rgba(93, 89, 94, 0.922);
+}
+
+.list-container{
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.btn {
+  color: rgb(204, 194, 194);
+  padding: 5px;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s; 
+  width: 90%;
+}
+
+.btn:hover {
+  background-color: #979aa1f4;
+}
+
+.list-item{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+    line-height: 18px;
+    gap: 5px;
+}
+
+.btn svg{
+    width: 15px;
+    height: 15px;
+    color: rgb(238, 234, 233);
+}
+
+.icon-button{
+  justify-content: space-between;
+}
+
+.icon-button svg{
+  padding: 0;
+}
+
+.icon-button svg{
+    width: 12px;
+    height: 12px;
+}
+
+.icon-button span{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

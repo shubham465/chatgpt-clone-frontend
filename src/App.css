@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #121212;
+  color: #f1f1f1;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.chat-box{
+  align-items: center;
+}
+
+h3{
+  margin-top: 40px;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid #2a2a2a;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: #202123;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #2f2f2f;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.auth{
+  display: flex;
+  gap: 10px
+}
+
+.auth button{
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: medium;
+}
+
+.auth button:nth-of-type(1){
+  background-color: #0d0e0f;
+  border: 2px solid rgb(255, 254, 255);
+  color: white;
+}
+
+.auth button:nth-of-type(2){
+  color: black;
+  border-radius: 30px;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-message {
+  display: flex;
+  width: 100%;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.assistant-message {
+  justify-content: flex-start;
+}
+
+.message-content {
+  padding: 10px 14px;
+  border-radius: 16px;
+  max-width: 75%;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.user-message .message-content {
+  background-color: #0078ff;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.assistant-message .message-content {
+  background-color: #2f2f2f;
+  color: #eaeaea;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-input-area {
+  display: flex;
+  padding: 10px;
+  padding-left: 20px;
+  background-color: #202123;
+  border-top: 1px solid #2a2a2a;
+}
+
+.chat-input-area input {
+  flex: 1;
+  border: none;
+  padding: 12px 25px;   /* 👈 Adds equal space for both placeholder & typed text */
+  outline: none;
+  border-radius: 20px;
+  background-color: #2f2f2f;
+  color: white;
+  font-size: 1rem;
+}
+
+.chat-input-area button {
+  margin-left: 8px;
+  background-color: #0078ff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-input-area button:hover {
+  background-color: #0062cc;
+}
+
+.chat-input-area input::placeholder {
+  color: #999;
+}
