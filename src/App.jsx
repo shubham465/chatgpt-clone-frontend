@@ -16,7 +16,14 @@ export default function App() {
   const [chat, setChat] = useState({})
   const [chats, setChats] = useState([])
   const navigate = useNavigate()
+ const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
@@ -94,9 +101,9 @@ export default function App() {
   }, [chat])
 
   return (
-    <div className="" style={{display: 'flex'}}>
-    {isLoggedIn ? <Sidebar chat={chat} chats={chats} setChats={setChats} setChat={setChat} token={token}/> : <></> }
-    <div className="chat-container" style={isLoggedIn ? {width: '85vw'} : {width: '100vw'}}>
+    <div className="app-container" style={{display: 'flex'}}>
+    {isLoggedIn ? <Sidebar chat={chat} chats={chats} isMobile={isMobile} setChats={setChats} setChat={setChat} token={token}/> : <></> }
+    <div className="chat-container" style={isMobile && isLoggedIn ? { width : '75vw'} : isLoggedIn ? {width: '85vw'} : {width: '100vw'}}>
       <div className="chat-header">💬 ChatGPT Clone
         <div className="auth">
         {!isLoggedIn &&

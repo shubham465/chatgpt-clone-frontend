@@ -17,10 +17,13 @@ h3{
   margin-top: 40px;
 }
 
+.app-container{
+  height: 100vh;
+}
+
 .chat-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   margin: 0 auto;
   border: 1px solid #2a2a2a;
   background-color: #1e1e1e;

@@ -7,7 +7,7 @@ import { domain } from "./constant";
 import DeleteIcon from '@mui/icons-material/Delete';
 import SearchDialog from './SearchDialog'
 
-const Sidebar = ({chat, setChat, token, chats, setChats}) => {
+const Sidebar = ({chat, setChat, token, chats, setChats, isMobile}) => {
    
    const [hover, setHover] = useState(null);
    const [open, setOpen] = useState(false)
@@ -61,7 +61,7 @@ const Sidebar = ({chat, setChat, token, chats, setChats}) => {
    },[])
 
    return (
-            <div className="Container" style={{width: '15vw', padding: '5px'}}>
+            <div className="Container" style={isMobile ? {width: '25vw', padding: '5px'} : {width: '15vw', padding: '5px'}}>
                 <div className="sidebar-list-container">
                    <LogoVariant1 width={25} height={25}/>
                    <div className="list-container">
